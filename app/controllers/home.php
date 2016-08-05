@@ -10,20 +10,20 @@ class home extends Controller
 
 {
 
-    protected $controller;
-    protected $method;
-    protected $param=[];
 
-    public function __construct()
+    public function index($name ='aa')
     {
-        
+        $users = User::all();
+        $this->render('home/index',['users'=>$users]);
+
     }
 
-    public function parseUrl()
+    public function create($name ='',$email='')
     {
-     if (isset($_GET['url'])){
+        User::create([
+           'name'=>$name,
+           'email'=>$email
+        ]);
 
-
-     }
     }
 }

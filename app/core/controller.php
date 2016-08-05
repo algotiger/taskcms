@@ -8,5 +8,21 @@
  */
 class controller
 {
+    public function model($model)
+    {
+       require_once "../app/models/".$model.'.php';
+        return new $model();
+    }
+
+    /**
+     * @param $view
+     * @param $data
+     *
+     * @return mixed
+     */
+    public function render($view,$data = [])
+    {
+       require_once "../app/views/".$view.'.php';
+    }
 
 }
