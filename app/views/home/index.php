@@ -1,5 +1,3 @@
-Marouane Zwin Lbogoss
-
 <table style="border: solid 2px #777 ; width: 200px">
     <?php
         $users = $data['users'];

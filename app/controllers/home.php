@@ -17,6 +17,12 @@ class home extends Controller
         $this->render('home/index',['users'=>$users]);
 
     }
+    public function view($id ='')
+    {
+        $user = User::find($id);
+        $this->render('home/view',['user'=>$user]);
+
+    }
 
     public function create($name ='',$email='')
     {
